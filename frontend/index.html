@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpportunityHub — Find Your Next Internship</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Background glow effect -->
+  <div class="glow-bg"></div>
+
+  <!-- Navbar injected by JS -->
+
+  <div class="page-content">
+    <!-- ── Hero ── -->
+    <section class="hero container">
+      <div class="hero-badge">✦ Latest Opportunities</div>
+      <h1>
+        Find Your Next<br/>
+        <span class="gradient">Internship & Job</span>
+      </h1>
+      <p>
+        Discover curated internships and opportunities from top companies.
+        Apply, save, and track — all in one place.
+      </p>
+      <div class="hero-actions">
+        <a href="add.html" class="btn btn-primary btn-lg">➕ Post an Opportunity</a>
+        <a href="saved.html" class="btn btn-secondary btn-lg">🔖 Saved</a>
+      </div>
+    </section>
+
+    <!-- ── Filter Bar ── -->
+    <div class="container">
+      <div class="filter-bar">
+        <input
+          type="text"
+          class="search-input"
+          id="searchInput"
+          placeholder="Search by title, company, or location…"
+          oninput="filterOpportunities()"
+        />
+        <select class="filter-select" id="categoryFilter" onchange="filterOpportunities()">
+          <option value="">All Categories</option>
+          <option>Engineering</option>
+          <option>Design</option>
+          <option>Marketing</option>
+          <option>Finance</option>
+          <option>Management</option>
+          <option>Data Science</option>
+          <option>Other</option>
+        </select>
+        <select class="filter-select" id="locationFilter" onchange="filterOpportunities()">
+          <option value="">All Locations</option>
+          <option>Remote</option>
+          <option>On-site</option>
+          <option>Hybrid</option>
+        </select>
+      </div>
+
+      <!-- ── Opportunities Grid ── -->
+      <section class="section">
+        <div class="section-title">
+          Opportunities
+          <span class="count" id="countLabel">—</span>
+        </div>
+        <div class="cards-grid" id="opportunitiesGrid">
+          <!-- Skeleton placeholders while loading -->
+          <div class="card" style="height:200px;">
+            <div class="skeleton" style="width:60%;height:20px;margin-bottom:10px;"></div>
+            <div class="skeleton" style="width:40%;height:14px;margin-bottom:18px;"></div>
+            <div class="skeleton" style="width:100%;height:12px;margin-bottom:8px;"></div>
+            <div class="skeleton" style="width:80%;height:12px;"></div>
+          </div>
+          <div class="card" style="height:200px;">
+            <div class="skeleton" style="width:55%;height:20px;margin-bottom:10px;"></div>
+            <div class="skeleton" style="width:45%;height:14px;margin-bottom:18px;"></div>
+            <div class="skeleton" style="width:100%;height:12px;margin-bottom:8px;"></div>
+            <div class="skeleton" style="width:70%;height:12px;"></div>
+          </div>
+          <div class="card" style="height:200px;">
+            <div class="skeleton" style="width:65%;height:20px;margin-bottom:10px;"></div>
+            <div class="skeleton" style="width:35%;height:14px;margin-bottom:18px;"></div>
+            <div class="skeleton" style="width:100%;height:12px;margin-bottom:8px;"></div>
+            <div class="skeleton" style="width:85%;height:12px;"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

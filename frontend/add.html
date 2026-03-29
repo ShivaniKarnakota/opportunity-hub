@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Opportunity — OpportunityHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="glow-bg"></div>
+
+  <!-- Navbar injected by JS -->
+
+  <div class="page-content container">
+    <div class="page-header">
+      <h1>Post an <span class="highlight">Opportunity</span></h1>
+      <p>Share an internship or job with the community. Your post will be reviewed by an admin before publishing.</p>
+    </div>
+
+    <div class="form-card" style="max-width:640px;">
+      <form id="addForm" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="title">Job Title *</label>
+            <input type="text" id="title" placeholder="e.g. Frontend Intern" required />
+            <div class="form-error" id="titleError">Title is required</div>
+          </div>
+          <div class="form-group">
+            <label for="company">Company *</label>
+            <input type="text" id="company" placeholder="e.g. Google" required />
+            <div class="form-error" id="companyError">Company is required</div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="location">Location *</label>
+            <input type="text" id="location" placeholder="e.g. Remote / Hyderabad" required />
+            <div class="form-error" id="locationError">Location is required</div>
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category">
+              <option value="">Select category</option>
+              <option>Engineering</option>
+              <option>Design</option>
+              <option>Marketing</option>
+              <option>Finance</option>
+              <option>Management</option>
+              <option>Data Science</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="stipend">Stipend / Salary</label>
+            <input type="text" id="stipend" placeholder="e.g. ₹15,000/month" />
+          </div>
+          <div class="form-group">
+            <label for="duration">Duration</label>
+            <input type="text" id="duration" placeholder="e.g. 3 months" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="link">Application Link *</label>
+          <input type="url" id="link" placeholder="https://example.com/apply" required />
+          <div class="form-error" id="linkError">Please enter a valid URL</div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" placeholder="Brief description of the role, requirements, perks…"></textarea>
+        </div>
+
+        <div id="formMessage" style="margin-bottom:1rem;display:none;"></div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;" id="submitBtn">
+          🚀 Submit Opportunity
+        </button>
+
+        <p style="margin-top:1rem;font-size:0.8rem;color:var(--text-dim);text-align:center;">
+          Your submission will be reviewed by an admin and published once approved.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/add.js"></script>
+</body>
+</html>

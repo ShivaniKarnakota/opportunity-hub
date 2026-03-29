@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saved Opportunities — OpportunityHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="glow-bg"></div>
+
+  <!-- Navbar injected by JS -->
+
+  <div class="page-content container">
+    <div class="page-header">
+      <h1>🔖 Saved <span class="highlight">Opportunities</span></h1>
+      <p>All the internships and jobs you've bookmarked, in one place.</p>
+    </div>
+
+    <div class="filter-bar">
+      <input
+        type="text"
+        class="search-input"
+        id="searchInput"
+        placeholder="Search saved opportunities…"
+        oninput="filterSaved()"
+      />
+    </div>
+
+    <section class="section">
+      <div class="section-title">
+        Bookmarked
+        <span class="count" id="countLabel">—</span>
+      </div>
+      <div class="cards-grid" id="savedGrid">
+        <!-- Filled by JS -->
+        <div class="card" style="height:180px;">
+          <div class="skeleton" style="width:60%;height:18px;margin-bottom:10px;"></div>
+          <div class="skeleton" style="width:40%;height:13px;margin-bottom:18px;"></div>
+          <div class="skeleton" style="width:100%;height:12px;margin-bottom:8px;"></div>
+          <div class="skeleton" style="width:70%;height:12px;"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/saved.js"></script>
+</body>
+</html>
